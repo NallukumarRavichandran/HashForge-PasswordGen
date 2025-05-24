@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HashForge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>HashForge</h1>
+        <div class="password-display-container">
+            <input type="text" id="passwordDisplay" placeholder="Your Password" readonly>
+            <button id="copyButton">Copy</button>
+        </div>
+        <div class="options">
+            <div class="option option-slider">
+                <label for="length">Password Length:</label>
+                <input type="range" id="length" value="12" min="8" max="128">
+                <span id="lengthValue">12</span>
+            </div>
+            <div class="option">
+                <input type="checkbox" id="uppercase" checked>
+                <label for="uppercase">Include Uppercase Letters</label>
+            </div>
+            <div class="option">
+                <input type="checkbox" id="lowercase" checked>
+                <label for="lowercase">Include Lowercase Letters</label>
+            </div>
+            <div class="option">
+                <input type="checkbox" id="numbers" checked>
+                <label for="numbers">Include Numbers</label>
+            </div>
+            <div class="option">
+                <input type="checkbox" id="symbols">
+                <label for="symbols">Include Symbols</label>
+            </div>
+        </div>
+        <div class="strength-meter">
+            <div id="strengthIndicator" class="strength-indicator-bar"></div>
+            <span id="strengthText"></span>
+        </div>
+        <button id="generateButton" class="generate-btn">Generate Password</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
